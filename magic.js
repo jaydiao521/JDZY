@@ -10,7 +10,7 @@ const CryptoJS = require("crypto-js");
 let cookies = [];
 let testMode = process.env.TEST_MODE?.includes('on') ? true
     : __dirname.includes("magic")
-let sendNotifyON = process.env.M_WX_SENDNOTIFYON ? process.env.M_WX_SENDNOTIFYON : 'true'
+
 let mode = process.env.MODE ? process.env.MODE : "local"
 
 let wxBlackCookiePin = process.env.M_WX_BLACK_COOKIE_PIN
@@ -144,7 +144,7 @@ class Env {
             this.bot = data.bot;
         }
 
-        console.log(`推送状态：${sendNotifyON}\n原始ck长度`, cookies.length)
+        console.log('原始ck长度', cookies.length)
         if (data?.blacklist?.length > 0) {
             for (const cki of this.__as(data.blacklist)) {
                 delete cookies[cki - 1];
@@ -311,10 +311,10 @@ class Env {
                 `\n时间：${this.now()} 时长：${((this.timestamp() - this.start)
                     / 1000).toFixed(2)}s`)
             if (this.bot) {
-                sendNotifyON == 'true' ? await notify.sendNotify("/" + this.name,
-                    this.msg.join(this.delimiter || '')) : ''
+                await notify.sendNotify("/" + this.name,
+                    this.msg.join(this.delimiter || ''))
             } else {
-                sendNotifyON == 'true' ? await notify.sendNotify(this.name, this.msg.join("\n")) : ''
+                await notify.sendNotify(this.name, this.msg.join("\n"))
             }
         }
     }
