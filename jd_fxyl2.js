@@ -3,7 +3,7 @@
 ownCookieNum 需要助力数量，默认4个
 SHARE_ACTIVITY_ID活动id
 作者：小埋h ttps://t.me/okyydsnb
-7 7 7 7 7
+cron:1 1 1 1 *
 注意控制ck数量
 即时任务，无需cron
 */
