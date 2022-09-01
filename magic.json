@@ -1,22 +1,24 @@
 {
-    "api_id": 3741859,
-    "api_hash": "f81a30b542215b3d578",
-    "bot_id": 1657544667,
-    "bot_token": "1657544667:AAGO7sit_k_0u_C1w7U",
-    "user_id": 951306588,
-    "proxy": true,
+    "api_id": 5301199,
+    "api_hash": "a2de1d5afc07456b8eb2167e35f38f78",
+    "bot_id": 5102742440,
+    "bot_token": "5102742440:AAE_HPXo7Uv-7do4fDOw-C0q8O4St_CV4uA",
+    "user_id": 1731750108,
+    "proxy": false,
     "proxy_type": "socks5",
     "proxy_addr": "127.0.0.1",
     "proxy_port": 7890,
     "command": "task",
-    "log_path": "/jd/log",
+    "log_path": "/ql/log",
     "log_send": true,
     "monitor_cache_size": 30,
-    "monitor_cars是你要监控的对象，需要填上自己bot的id和线报频道或群组id": 1,
     "monitor_cars": [
-        -1001718319262,
-        -1001533334185,
-        1657544667
+        -1001722783187,
+        -1001659538110,
+	   -1001209753016, 
+	   -1001276799295,
+	   -1001728533280,        
+        1731750108
     ],
     "monitor_auto_stops": [
         "jd_AutoOpenCard"
