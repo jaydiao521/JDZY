@@ -8,10 +8,14 @@
     "proxy_type": "socks5",
     "proxy_addr": "127.0.0.1",
     "proxy_port": 7890,
+    "proxy_username": "username",
+    "proxy_password": "password",
+    "proxy_secret": "如果proxy_type是MTProxy,则该值必填",	
     "command": "task",
     "log_path": "/ql/log",
     "log_send": true,
     "monitor_cache_size": 30,
+    "monitor_cars是你要监控的对象，需要填上自己bot的id和线报频道或群组id": 1,
     "monitor_cars": [
         -1001722783187,
         -1001659538110,
@@ -24,14 +28,30 @@
         "jd_AutoOpenCard"
     ],
     "monitor_scripts_path 填写与面板上一样的路径": 1,
-    "monitor_scripts_path": "/jd/scripts",
+    "monitor_scripts_path": "/ql/scripts",
     "monitor_scripts": {
+        "M_WX_SECOND_DRAW_URL": {
+            "name": "M读秒手速",
+            "file": "m_jd_wx_secondDraw.js",
+            "wait": 0,
+            "queue": false,
+            "queue_name": "M_WX_SECOND_DRAW_URL",
+            "enable": true
+        },
         "M_WX_BUILD_DRAW_URL": {
             "name": "M盖楼领奖",
             "file": "m_jd_wx_buildDraw.js",
             "wait": 0,
             "queue": false,
             "queue_name": "M_WX_BUILD_DRAW_URL",
+            "enable": true
+        },
+        "M_WX_LEVEL_BIRTH_URL": {
+            "name": "M等级/生日礼包",
+            "file": "m_jd_wx_levelBirth.js",
+            "wait": 0,
+            "queue": false,
+            "queue_name": "M_WX_LEVEL_BIRTH_URL",
             "enable": true
         },
         "M_WX_SHOP_GIFT_URL": {
